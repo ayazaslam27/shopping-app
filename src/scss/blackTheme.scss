@@ -1,0 +1,113 @@
+$primaryColor: #4285f4;
+$baseBg: #f8f9fa;
+$darkenBg: darken($baseBg, 5%);
+$lightenBg: #e0e0e0;
+
+$itemColor: #262626;
+
+$itemOpenColor: #fff;
+$itemOpenBg: $primaryColor;
+
+$itemHoverColor: #262626;
+$itemHoverBg: $darkenBg;
+
+$iconColor: #262626;
+$iconBg: #bbc5d6;
+
+$iconActiveColor: #fff;
+$iconActiveBg: #262626;
+
+$iconOpenColor: #fff;
+$iconOpenBg: transparent;
+
+$mobileItemColor: #fff;
+$mobileItemBg: $primaryColor;
+$mobileIconBg: transparent;
+$mobileIconColor: #fff;
+
+$dropDownColor: #262626;
+$dropDownBg: #e3e3e3;
+
+.sidebar-menu {
+  // background-color: $baseBg;
+  & .link {
+    color: $itemColor;
+    background-color: $baseBg;
+  }
+  & .item.mobile-item {
+    & > .link {
+      color: $itemColor;
+    }
+    & > .icon {
+      color: $iconColor;
+      background-color: $iconBg;
+    }
+  }
+  & .item.first-item {
+    & > .link {
+      & > .icon {
+        color: $iconColor;
+        background-color: $iconBg;
+      }
+    }
+    &.active-item > .link,
+    &.parent-active-item > .link {
+      box-shadow: 3px 0px 0px 0px $primaryColor inset;
+      & > .icon {
+        color: $iconActiveColor;
+        background-color: $iconActiveBg;
+      }
+    }
+  }
+  &.rtl .item.first-item {
+    &.active-item > .link,
+    &.parent-active-item > .link {
+      box-shadow: -3px 0px 0px 0px $primaryColor inset;
+    }
+  }
+  &.default {
+    & .item.first-item {
+      &.open-item > .link {
+        color: $itemOpenColor;
+        background-color: $itemOpenBg;
+        & > .icon {
+          color: $iconOpenColor;
+          background-color: $iconOpenBg;
+        }
+      }
+    }
+    & .link:hover {
+      color: $itemHoverColor;
+      background-color: $itemHoverBg;
+    }
+  }
+  & .dropdown {
+    & > .list {
+      background-color: $dropDownBg;
+      & .link {
+        color: $dropDownColor;
+      }
+      & .link:hover {
+        color: $itemHoverColor;
+        background-color: $itemHoverBg;
+      }
+    }
+  }
+  & .mobile-bg {
+    background-color: $mobileItemBg;
+  }
+  & .header {
+    color: rgba($itemColor, 0.7);
+  }
+  & .home {
+    color: rgba($itemColor, 0.7);
+  }
+  & .badge.default-badge {
+    color: $itemColor;
+    background-color: $darkenBg;
+  }
+  & .collapse-btn {
+    color: $itemColor;
+    background-color: $darkenBg;
+  }
+}
