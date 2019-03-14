@@ -7,7 +7,7 @@ import Product from "@/components/Product";
 import Registration from "@/components/Registration";
 import frontLayout from "@/components/front-layout";
 import Checkout from "@/components/Checkout";
-import Order from "../components/Order";
+import Order from "@/components/Order";
 
 Vue.use(Router);
 

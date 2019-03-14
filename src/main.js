@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./js/router";
+import router from "./js/router/router";
 
-import store from "./js/store";
+import store from "./js/vuex/store";
 import VeeValidate from "vee-validate";
 
 Vue.use(VeeValidate, {

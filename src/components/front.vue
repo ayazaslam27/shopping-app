@@ -1,16 +1,15 @@
 <template>
-  <div>
+  <section>
     <div v-if="mobileVersion" class="row">
       <search></search>
     </div>
     <div class="row">
       <SideBar :style="openSideMenuStyle" :class="[mobileVersion ? 'col-12':'col-3']"/>
-
       <div :class="[mobileVersion ? 'position-absolute col-12':'col-9']">
         <router-view></router-view>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div :class="[!mobileVersion? 'container ': '']">
-      <div class="row no-gutter">
+      <div class="row">
         <div class="col-12">
           <Navigation/>
           <cart ref="cart" :showCart="showCart && !mobileVersion"></cart>
@@ -17,7 +17,7 @@ import Navigation from "./components/navBar/navBar.vue";
 import cart from "./components/cart/cart";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { eventMixin } from "./js/mixins";
-import apiActions from "./js/apiActions";
+import apiActions from "./js/restfulApiCaller/apiActions";
 import jwt from "jsonwebtoken";
 
 export default {

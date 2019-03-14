@@ -33,7 +33,7 @@ import basket from "@/components/user/basket";
 import paymentOption from "@/components/user/payment-options";
 import invoice from "@/components/user/invoice";
 
-import apiActions from "../js/apiActions";
+import apiActions from "../js/restfulApiCaller/apiActions";
 
 export default {
   name: "checkout",

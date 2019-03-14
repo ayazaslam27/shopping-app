@@ -169,7 +169,7 @@
 </template>
 
 <script>
-import apiActions from "../../js/apiActions";
+import apiActions from "../../js/restfulApiCaller/apiActions";
 export default {
   name: "new-user",
   data() {
